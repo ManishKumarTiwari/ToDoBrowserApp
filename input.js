@@ -46,12 +46,14 @@ window.onload = function() {
 
             var new_divelement=document.getElementById(i+"divelement");
             var oldbtn=new_divelement.childNodes[2];
+            var old_complete_btn=new_divelement.childNodes[1];
             var donebtn = document.createElement("BUTTON");
             var x=document.createTextNode("Save");
             donebtn.appendChild(x);
             donebtn.setAttribute("class", "button save-btn");
             donebtn.setAttribute('onclick','saveEditedTask("'+i+'")');
             new_divelement.replaceChild(donebtn,oldbtn);
+            new_divelement.removeChild(old_complete_btn);
         }
 
     }
